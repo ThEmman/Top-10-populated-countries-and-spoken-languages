@@ -1,0 +1,83 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'Inter', sans-serif;;
+}
+:root{
+   --colorSchemeOrange: #f5a94c;
+   --bgColor: whitesmoke;
+   --boxShadowDown: 0px 3px 3px rgba(0 ,0 ,0,0.3);
+   --boxShadowUp: 0px -3px 3px rgba(0 ,0 ,0,0.3);
+}
+body{
+   padding: 5px;
+}
+/*header elements css*/
+header{
+   display: flex;
+   flex-flow: column; 
+   align-items: center;
+   justify-content: center;
+   line-height: 2.5rem;
+   text-align: center;
+}
+.head{
+   width: 100%;
+   box-shadow: var(--boxShadowDown);
+   position: relative;
+   background-color: var(--bgColor);
+}
+.head h1{
+   color: var(--colorSchemeOrange);
+   font-size: 3em;
+   font-weight: bold;
+}
+.btn-and-paragraph-container{
+   width: 100%;
+   margin: auto 0;
+}
+.btn{
+   padding: 8px 20px;
+   border:none;
+   background-color: var(--colorSchemeOrange);
+   border-radius: 2px;
+   margin-left: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+.btn:hover{
+   background-color: black;
+   color: var(--colorSchemeOrange);
+}
+/*main elements css*/
+/*background-color: rgb(245, 243, 228);*/
+
+main{
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+   position: relative;
+   box-shadow: var(--boxShadowUp);
+   background-color: var(--bgColor);
+}
+.grid-container{
+   padding: 20px;
+   display: grid;
+   grid-template-areas: 
+   "graph graph graph graph"
+   "graph graph graph graph";
+   gap: 10px;
+   width: fit-content;
+   height: fit-content;
+}
+.gridItem2{
+   grid-area: graph;
+}
+.gridItem2 canvas{
+   display: inline-block;
+   align-self: center;
+   justify-self: center;
+   width: 1000px;
+   height: 500px;
+}
